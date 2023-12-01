@@ -1,0 +1,12 @@
+<body>
+  <div class="navigationImage d-flex flex-row justify-content-end bg-success">
+    <img class="navigation-image"src="../../assets/images/profile.jpg" height="35" width="35" style="border-radius:100em"/>
+  </div>
+  <div class="student_button">
+    <div class="student_container">
+      <div style="display:grid;grid-template-columns:auto auto;gap:1em;">
+          <div *ngFor="let student of mentee_info" class="btn btn-dark" (click)="academics_student(student._id)" style="border:0.1em solid white;font-family:cursive"><b><i>{{student.username}}</i></b></div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,31 @@
+body{
+  height:100vh;
+  width:100%;
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background:url('../../assets/images/blacklines.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  margin:0px;
+}
+.navigation-image:hover{
+  opacity:0.6
+}
+.student_button{
+  display:grid;
+  grid-template-columns: 20vw 60vw 20vw;
+  grid-template-rows: 20vh 50vh 20vh;
+}
+.student_container{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  border:0.3em double silver;
+  padding:1em;
+  border-radius:1em;
+
+}

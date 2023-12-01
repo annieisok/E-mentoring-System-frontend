@@ -1,0 +1,34 @@
+body{
+  height:100vh;
+  width:100%;
+  margin:0px;
+  background:url('../../assets/images/bac.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  font-family:cursive;
+  overflow:hidden;
+  box-shadow: 100cap;
+}
+.navigationImage:hover{
+  opacity:0.6;
+}
+/* .grid{
+  display:grid;
+  grid-template-columns:auto auto;
+  grid-template-rows:auto auto auto;
+
+
+}
+.grid_item{
+  grid-row-start:2;
+  grid-row-end:3;
+  grid-column-start:1;
+  grid-column-end: 2;
+} */
+a:hover{
+  opacity:0.8
+}
+a{
+  color:black;
+  font-weight:20em;
+}

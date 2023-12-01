@@ -1,0 +1,18 @@
+<body>
+  <div class=" bg-success d-flex flex-row justify-content-end">
+      <img class="navigationImage" src="../../assets/images/profile.jpg" height="35" width="35" style="border-radius:100em"/>
+  </div>
+  <div class="container bg-white" style="background:url('../../assets/images/chat_creme.avif');background-repeat:no-repeat;height:100%;padding:1em;" >
+    <div class="row">
+      <div class="col-6 m-5 text-dark"><b><i><u>Uploaded Memos:</u></i></b></div>
+      <div class="col-12 m-1" *ngFor="let upload of student_uploads"><a href="../../assets/uploaded files/{{upload}}" download>{{upload}}</a></div>
+    </div>
+    <div *ngIf="user_role=='student'" class="row mt-5"><b><i><u>Choose file to upload:</u></i></b>
+      <br>
+      <br>
+      <input type="file" (change)="file_upload($event)" name="file"/>
+    </div>
+
+  </div>
+
+</body>

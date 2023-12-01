@@ -1,0 +1,26 @@
+<body>
+  <div class="bg-success">
+    <div class="d-flex justify-content-end" style="margin-right:1vh;">
+      <img src="../../assets/images/profile.jpg" height="30" width="30" style="border-radius:100%"/>
+    </div>
+  </div>
+  <div class="uploads container bg-dark p-5" style="height:100vh;">
+    <div class=" col-1 text-warning uploads" style="font-family:cursive"><p><b>Uploads:</b></p></div><hr style="color:white" class="shadow-lg">
+    <!-- CODE FOR DOWNLOADABLE ASSIGNMENTS LIST -->
+      <div *ngIf="upload_info.length<1"><p class="text-warning"><b><i>Currently,there are no uploads </i></b></p></div>
+      <div *ngIf="upload_info.length>0">
+       <div class="row" *ngFor="let upload of upload_info">
+        <div class=" col-5 m-1 links btn btn-warning" >
+          <a href="../../assets/uploaded files/{{upload}}" download style="color:White">{{upload}}</a>
+          <br>
+        </div>
+       </div>
+      </div>
+    <hr style="color:white" class="shadow-lg">
+    <!-- CODE FOR UPLOAD FEATURE -->
+    <div *ngIf="user_role=='mentor'"><p class="text-warning uploads"><b>Choose file to upload:</b><br><br><input type="file" name="file" (change)="file($event)" ngModel/></p></div>
+    <hr style="color:white" class="shadow-lg">
+    <!-- <div class="btn btn-warning" (click)="download()">download</div> -->
+  </div>
+
+</body>

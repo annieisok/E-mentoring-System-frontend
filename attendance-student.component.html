@@ -1,0 +1,60 @@
+
+<body>
+  <div class="d-flex flex-row">
+    <div class=" bg-success d-flex justify-content-end" style="width:100%;">
+        <img class="profile" src="../../assets/images/profile.jpg" height="40" width="40" style="border-radius:100%;margin-right:0.2em;"/>
+    </div>
+
+  </div>
+  <div class="container bg-dark p-5 pt-0" style="overflow-y:scroll;height:100%">
+    <div class="row" style="margin-top:0px" style="">
+      <div class="col-12 bg-warning" style="margin-top:0px">
+        <p class="text-center" style="font-family:cursive;"><b><h1>Attendance</h1></b></p>
+
+      </div>
+      <div class="col-12 pt-5 " style="" >
+        <p class="text-white " style="" *ngFor="let x of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]">
+
+          <b>Week {{x}}:&nbsp;&nbsp;&nbsp;<span class=" btn btn-warning"><i>{{get_attendence(x)}}</i></span></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span *ngIf="role=='mentor'" style="margin-left:1em">&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-primary update" id={{x}} (click)="update_Attendance(x)" [disabled]=false>update</button></span>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="mode shadow-lg " style="display:none;">
+      <!-- <div class="container pb-5">
+        <div style="position:absolute;left:1em"><b><i><u>Week {{currentweek}}</u></i></b></div>
+        <div class="d-flex justify-content-end">
+
+          <div class="btn btn-white" style="" (click)="close()"><b ><i>&times;</i></b></div>
+
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <b>Please update the attendence in number:</b>
+            </div>
+            <br>
+            <br>
+            <div class="col-12">
+              <input type="number" style="width:15vw;" name="updated_attendence_value" [(ngModel)]="updated_attendence_value"/>
+            </div>
+
+            <div (click)="updated_Attendence(currentweek)" class="d-flex justify-content-center btn btn-warning text-center p-0 mt-1" style="border-radius:100em;font-size:1.5vw;">Update</div>
+          </div>
+        </div>
+      </div> -->
+      <button class="btn btn-white" (click)="close()" style="position:absolute;right:0px;top:0px;">&times;</button>
+      <div class="container bg-white">
+          <div class="row">
+            <div class="col-12 "><b><i> <u>Week {{currentweek}}</u></i></b></div>
+            <div class="col-12"><b>Enter the percentage of Attendance in number or decimals to be updated:</b></div>
+            <input class="col-12 mt-3" name="updated_attendence_value" [(ngModel)]="updated_attendence_value" type="number">
+
+          </div>
+      </div>
+      <div (click)="updated_Attendence(currentweek)" style="position:absolute;bottom:1px;left:40%;background-color:#ffc107;padding:0.4em;border-radius:0.6em;border:1px solid black;"><b>update</b></div>
+  </div>
+</body>
